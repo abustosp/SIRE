@@ -144,6 +144,7 @@ Sire_Modificado["% RET efectivo"] = (Sire_Modificado["IMPORTE RETENCIÓN"] / Sir
 
 Sire_Modificado.loc[Sire_Modificado["IVA MCr"].notnull() , ["BASE DE CÁLCULO"]] = Sire_Modificado["IVA MCr"]
 Sire_Modificado.loc[Sire_Modificado["Fecha MCr"].notnull() , ["FECHA CBTE"]] = Sire_Modificado["Fecha MCr"]
+Sire_Modificado.loc[Sire_Modificado["Imp. Total MCr"].notnull() , ["IMPORTE COMPROBANTE"]] = Sire_Modificado["Imp. Total MCr"]
 
 #######
 
