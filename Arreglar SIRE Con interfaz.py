@@ -129,6 +129,7 @@ Realizando arreglos...
                 ####### Reemplazar valores de IVA en Tabla original
                 Sire_Modificado.loc[Sire_Modificado["IVA MCr"].notnull() , ["BASE DE CÁLCULO"]] = Sire_Modificado["IVA MCr"]
                 Sire_Modificado.loc[Sire_Modificado["Fecha MCr"].notnull() , ["FECHA CBTE"]] = Sire_Modificado["Fecha MCr"]
+                Sire_Modificado.loc[Sire_Modificado["Imp. Total MCr"].notnull() , ["IMPORTE COMPROBANTE"]] = Sire_Modificado["Imp. Total MCr"]
 
                 ######### Calcular el % de retención teorico
                 Sire_Modificado["% RET"] = np.NAN #Crear columna de % RET y rellenar con NaN
