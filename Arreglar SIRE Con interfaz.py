@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import os
 import customtkinter as ctk
-from tkinter import filedialog
+from tkinter import filedialog , messagebox
 from PIL import Image
 import tkinter
 
@@ -39,7 +39,7 @@ class App(ctk.CTk):
         def Seleccionar_Archivo_y_procesar():
 
             #Seleccionar el archivo
-            Archivo = filedialog.askopenfile(parent=self)
+            Archivo = filedialog.askopenfile(parent=self , title="Seleccionar archivo de SIRE")
 
             #si no se selecciona ningun archivo, dejar Archivo vacio
             if Archivo == None:
@@ -153,6 +153,9 @@ Realizando arreglos...
 
                 print('''Proceso finalizado: Archivos generados correctamente en la carpeta 'Generado'
                 ''')
+
+                # Crear una ventana de mensaje para informar que el proceso finalizó correctamente
+                messagebox.showinfo("Proceso finalizado", "Archivos generados correctamente en la carpeta 'Generado'")
                 
         #Crea un botón para seleccionar la carpeta desde una ventana del explorador de archivos
         boton = ctk.CTkButton(self, text="Seleccionar TXT de SIRE a corregir", command=Seleccionar_Archivo_y_procesar)
